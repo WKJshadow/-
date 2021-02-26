@@ -1,0 +1,432 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src='https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js'></script>
+        <!-- <script src="../../echarts/dist/echarts.js"></script> -->
+        <script src='echarts-wordcloud.js'></script>
+    </head>
+    <body>
+        <style>
+            html, body, #main {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+            }
+        </style>
+        <div id='main'></div>
+        <script>
+            var chart = echarts.init(document.getElementById('main'));
+
+            var option = {
+                tooltip: {},
+                series: [ {
+                    type: 'wordCloud',
+                    gridSize: 2,
+                    sizeRange: [12, 50],
+                    rotationRange: [-90, 90],
+                    shape: 'pentagon',
+                    width: 600,
+                    height: 400,
+                    drawOutOfBound: true,
+                    textStyle: {
+                        color: function () {
+                            return 'rgb(' + [
+                                Math.round(Math.random() * 160),
+                                Math.round(Math.random() * 160),
+                                Math.round(Math.random() * 160)
+                            ].join(',') + ')';
+                        }
+                    },
+                    emphasis: {
+                        textStyle: {
+                            shadowBlur: 10,
+                            shadowColor: '#333'
+                        }
+                    },
+                    data: [
+                        {
+                            name: '致敬',
+                            value: 10000,
+                            textStyle: {
+                                color: 'black'
+                            },
+                            emphasis: {
+                                textStyle: {
+                                    color: 'red'
+                                }
+                            }
+                        },
+                        {
+                            name: '加油',
+                            value: 797
+                        },
+                        {
+                            name: '我们',
+                            value: 772
+                        },
+                        {
+                            name: '中国',
+                            value: 735
+                        },
+                        {
+                            name: '武汉',
+                            value: 597
+                        },
+                        {
+                            name: '疫情',
+                            value: 570
+                        },
+                        {
+                            name: '英雄',
+                            value: 553
+                        },
+                        {
+                            name: '你们',
+                            value: 513
+                        },
+                        {
+                            name: '真的',
+                            value: 501
+                        },
+                        {
+                            name: '感谢',
+                            value: 474
+                        },
+                        {
+                            name: '感动',
+                            value: 456
+                        },
+                        {
+                            name: '不敢',
+                            value: 428
+                        },
+                        {
+                            name: '这个',
+                            value: 413
+                        },
+                        {
+                            name: '没有',
+                            value: 397
+                        },
+                        {
+                            name: '所有',
+                            value: 389
+                        },
+                        {
+                            name: '电视剧',
+                            value: 387
+                        },
+                        {
+                            name: '一起',
+                            value: 385
+                        },
+                        {
+                            name: '行者',
+                            value: 373
+                        },
+                        {
+                            name: '医护人员',
+                            value: 357
+                        },
+                        {
+                            name: '医生',
+                            value: 334
+                        },
+                        {
+                            name: '导演',
+                            value: 334
+                        },
+                        {
+                            name: '最美',
+                            value: 318
+                        },
+                        {
+                            name: '一个',
+                            value: 316
+                        },
+                        {
+                            name: '演员',
+                            value: 292
+                        },
+                        {
+                            name: '眼泪',
+                            value: 292
+                        },
+                        {
+                            name: '抗议',
+                            value: 290
+                        },
+                        {
+                            name: '这部',
+                            value: 289
+                        },
+                        {
+                            name: '看到',
+                            value: 249
+                        },
+                        {
+                            name: '真实',
+                            value: 249
+                        },
+                        {
+                            name: '伟大',
+                            value: 245
+                        },
+                        {
+                            name: '自己',
+                            value: 234
+                        },
+                        {
+                            name: '一直',
+                            value: 225
+                        },
+                        {
+                            name: '知道',
+                            value: 224
+                        },
+                        {
+                            name: '人民',
+                            value: 222
+                        },
+                        {
+                            name: '一线',
+                            value: 220
+                        },
+                        {
+                            name: '终于',
+                            value: 217
+                        },
+                        {
+                            name: '祖国',
+                            value: 204
+                        },
+                        {
+                            name: '看着',
+                            value: 193
+                        },
+                        {
+                            name: '希望',
+                            value: 193
+                        },
+                        {
+                            name: '好看',
+                            value: 181
+                        },
+                        {
+                            name: '点赞',
+                            value: 176
+                        },
+                        {
+                            name: '辛苦',
+                            value: 176
+                        },
+                        {
+                            name: '开始',
+                            value: 161
+                        },
+                        {
+                            name: '付出',
+                            value: 160
+                        },
+                        {
+                            name: '白衣天使',
+                            value: 153
+                        },
+                        {
+                            name: '感人',
+                            value: 140
+                        },
+                        {
+                            name: '护士',
+                            value: 139
+                        },
+                        {
+                            name: '湖北',
+                            value: 134
+                        },
+                        {
+                            name: '医院',
+                            value: 125
+                        },
+                        {
+                            name: '生命',
+                            value: 110
+                        },
+                        {
+                            name: '明星',
+                            value: 110
+                        },
+                        {
+                            name: '流泪',
+                            value: 101
+                        },
+                        {
+                            name: '谢谢',
+                            value: 110
+                        },
+                        {
+                            name: '感恩',
+                            value: 100
+                        },
+                        {
+                            name: '害怕',
+                            value: 99
+                        },
+                        {
+                            name: '工作者',
+                            value: 99
+                        },
+                        {
+                            name: '心里',
+                            value: 96
+                        },
+                        {
+                            name: '喜欢',
+                            value: 96
+                        },
+                        {
+                            name: '全国',
+                            value: 90
+                        },
+                        {
+                            name: '医护',
+                            value: 89
+                        },
+                        {
+                            name: '病毒',
+                            value: 87
+                        },
+                        {
+                            name: '经历',
+                            value: 86
+                        },
+                        {
+                            name: '忍不住',
+                            value: 85
+                        },
+                        {
+                            name: '强大',
+                            value: 83
+                        },
+                        {
+                            name: '特别',
+                            value: 80
+                        },
+                        {
+                            name: '口罩',
+                            value: 79
+                        },
+                        {
+                            name: '平凡',
+                            value: 76
+                        },
+                        {
+                            name: '骄傲',
+                            value: 72
+                        },
+                        {
+                            name: '众志成城',
+                            value: 33
+                        },
+                        {
+                            name: '华夏',
+                            value: 33
+                        },
+                        {
+                            name: '佳音',
+                            value: 34
+                        },
+                        {
+                            name: '才能',
+                            value: 34
+                        },
+                        {
+                            name: '自豪',
+                            value: 33
+                        },
+                        {
+                            name: '好久',
+                            value: 33
+                        },
+                        {
+                            name: '第一个',
+                            value: 33
+                        },
+                        {
+                            name: '坚持',
+                            value: 32
+                        },
+                        {
+                            name: '拼过',
+                            value: 32
+                        },
+                        {
+                            name: '保护',
+                            value: 32
+                        },
+                        {
+                            name: '战斗',
+                            value: 32
+                        },
+                        {
+                            name: '力量',
+                            value: 32
+                        },
+                        {
+                            name: '一点',
+                            value: 32
+                        },
+                        {
+                            name: '喜欢',
+                            value: 96
+                        },
+                        {
+                            name: '全国',
+                            value: 90
+                        },
+                        {
+                            name: '医护',
+                            value: 89
+                        },
+                        {
+                            name: '过年',
+                            value: 36
+                        },
+                        {
+                            name: '太好了',
+                            value: 39
+                        },
+                        {
+                            name: '回忆',
+                            value: 37
+                        },
+                        {
+                            name: '支援',
+                            value: 37
+                        },
+                        {
+                            name: '战胜',
+                            value: 38
+                        },
+                        {
+                            name: '严重',
+                            value: 34
+                        },
+                        {
+                            name: '社区',
+                            value: 35
+                        },
+                        {
+                            name: '孩子',
+                            value: 37
+                        }
+                    ]
+                } ]
+            };
+
+            chart.setOption(option);
+
+            window.onresize = chart.resize;
+        </script>
+    </body>
+</html>
